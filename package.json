@@ -11,6 +11,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "start": "node dist/index.js",
     "postinstall": "tsc",
     "build": "tsc",
     "dev": "NODE_ENV=development node --inspect=5858 -r ts-node/register ./src/index.ts",
