@@ -19,7 +19,7 @@ class SampleRepository implements ISampleRepository {
 
     public async getBySlug (slug: string): Promise<ISampleDbModel[]> {
       this._logger.info('SampleRepository getBySlug')
-      return await this._databaseManager.database
+      return this._databaseManager.database
         .collection(COLLECTION_NAME).find(
           { slug: { $regex: `.*${slug}.*` } }
         ).toArray()
@@ -27,13 +27,13 @@ class SampleRepository implements ISampleRepository {
 
     public async getAll (skip: number, limit: number): Promise<ISampleDbModel[]> {
       this._logger.info('SampleRepository getAll')
-      return await this._databaseManager.database
+      return this._databaseManager.database
         .collection(COLLECTION_NAME).find().skip(skip).limit(limit).toArray()
     }
 
     public async insert (newEntry: ISampleDbModel): Promise<any> {
       this._logger.info('SampleRepository insert')
-      return await this._databaseManager.database
+      return this._databaseManager.database
         .collection(COLLECTION_NAME).insertOne(newEntry)
     }
 }

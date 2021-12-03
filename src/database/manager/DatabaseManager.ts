@@ -12,7 +12,7 @@ class DataBaseManager implements IDatabaseManager {
   }
 
   public static getInstance (config: any, logger: ILogger): DataBaseManager {
-    if (DataBaseManager.instance !== undefined) {
+    if (DataBaseManager.instance === undefined) {
       DataBaseManager.instance = new DataBaseManager(config, logger)
     }
 
