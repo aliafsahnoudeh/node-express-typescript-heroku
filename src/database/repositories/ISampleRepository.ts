@@ -1,8 +1,8 @@
-import ISampleDbModel from '../dbModels/ISampleDbModel';
-import IRepository from './IRepository';
+import ISampleDbModel from '../dbModels/ISampleDbModel'
+import IRepository from './IRepository'
 
 interface ISampleRepository extends IRepository<ISampleDbModel> {
-    getBySlug: (slug: string) => Promise<ISampleDbModel[]>;
+  getBySlug: (slug: string) => Promise<ISampleDbModel[]>
 }
 
-export default ISampleRepository;
+export default ISampleRepository

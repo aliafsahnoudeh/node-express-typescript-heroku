@@ -1,5 +1,5 @@
 interface IRestServer {
-    start: () => void;
+  start: () => void
 }
 
-export default IRestServer;
+export default IRestServer

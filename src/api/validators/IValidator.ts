@@ -1,5 +1,5 @@
 interface IValidator<T> {
-    validate: (input: T) => any;
+  validate: (input: T) => any
 }
 
-export default IValidator;
+export default IValidator

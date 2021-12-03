@@ -1,8 +1,8 @@
-import IBaseModel from './IBaseModel';
+import IBaseModel from './IBaseModel'
 
 interface ISampleDbModel extends IBaseModel {
-    Slug: string;
-    Timestamp: number;
+  Slug: string
+  Timestamp: number
 }
 
-export default ISampleDbModel;
+export default ISampleDbModel
